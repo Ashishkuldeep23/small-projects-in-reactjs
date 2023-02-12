@@ -44,6 +44,8 @@ const ShowAllFeeds = () => {
 
         let a = await data.json()
 
+        console.log( a)
+
 
         if (a.status === false) {
             prrocessAllFeed.style.display = "hidden"
@@ -100,7 +102,7 @@ const ShowAllFeeds = () => {
 
                 <div className="show_All_FeedBack_main">
                     <h1>Click on Show Button to see all Feedbacks</h1>
-                    <input type="button" value="Show All Feedbacks" onClick={showAllFeedBack} id="show_all_feed_btn" />
+                    <input type="button" value="Show All Feedbacks" onClick={ ()=>{ showAllFeedBack() }} id="show_all_feed_btn" />
 
                     <div id="process_all_feeds"></div>
 
@@ -113,7 +115,7 @@ const ShowAllFeeds = () => {
 
 
                         {
-
+                           
                   
                             listOfAllFeeds.map((item, index) => {
 
@@ -126,7 +128,7 @@ const ShowAllFeeds = () => {
                                                  whenCreated={item.whenCreated}
                                             />)   } )  
 
-
+                          
 
                         }
 

@@ -33,6 +33,8 @@ const CardAndColorMain = () => {
 
                 <div style={{ ...styleOfDiv, backgroundColor: bgColor, border: '1px solid ' }}>
                     <h1 className='heading_greeting' style={{ border: "0px solid", fontFamily: "cursive" }}>Color By props,Child fn</h1>
+
+                    {/* This functional component is using for taking input -----------> */}
                     < ColorByProps colorByInner={colorByInner} />
                     <p className="text-center">☝️Write your favourite color and hit Enter</p>
                 </div>

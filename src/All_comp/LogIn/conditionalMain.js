@@ -19,6 +19,7 @@ const ConditionalMain = () => {
     const [lnameInput, setLnameInput] = useState("LName")
 
 
+    // // // This fn is using before when showing output on div --------->
     function FnameChangeHandler(e) {
         // // console.log(e.target.value)
         setFnameInput(e.target.value)
@@ -29,11 +30,10 @@ const ConditionalMain = () => {
         setLnameInput(e.target.value)
     }
 
-
-
     function submitName() {
         setName(`${fnameInput} ${lnameInput}`)
     }
+
 
 
     useEffect( ()=>{
