@@ -38,7 +38,7 @@ const FeedBody = () => {
                 <ModalMain title={"Feedback Section"} data={"This is the last section of this project , here user can give his feedback like what he or she likes in this web or what not like , or any other feedback of user.\nAll feedback will stored in Data Base so it can take some time to fetching feedbacks or posting feedback."} />
 
 
-                <div className=" px-auto d-md-flex  justify-content-around align-items-center w-75 ">
+                <div className=" d-md-flex justify-content-around align-items-center w-75 ">
 
 
 
