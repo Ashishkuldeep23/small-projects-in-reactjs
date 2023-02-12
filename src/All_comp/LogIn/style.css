@@ -1,0 +1,144 @@
+
+/* 
+    ======================================================================================================================================
+    ======================================================================================================================================
+    ======================================================================================================================================
+*/
+
+
+
+/*  Conditional css here ----> (Starts )  */
+.conditional_main{
+    height: 100vh;
+    width: 100%;
+    border: 1px solid;
+    color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(145, 212, 175, 0.896);
+
+    background-image: url("https://www.transparenttextures.com/patterns/hoffman.png");
+    
+
+}
+
+
+
+
+.conditional_main > div{
+
+    padding: 10vh;
+    border: 2px solid white;
+    border-radius: 10%;
+
+    background-color: rgba(125, 209, 163, 0.79);
+
+    
+}
+
+
+#hidden_text{
+    position: absolute;
+    top:25vh ;
+    left: 39%;
+    text-align: center;
+    display: none;
+    color: red;
+    line-break: loose;
+}
+
+
+
+
+.conditional_main > div:hover #hidden_text{
+    display: block;
+}
+
+
+.conditional_main > div > h1{
+
+    font-family: cursive;
+    font-weight: bolder;
+    margin-bottom: 5vh;
+
+}
+
+
+
+/*  Conditional css here ----> (Ends)  */
+
+
+
+
+
+
+
+
+
+
+
+
+/* User regestration data css ----------------> */
+
+
+
+.regester_div{
+
+    border: 2px solid transparent;
+
+
+}
+
+.regester_div>form>input{
+    display: block;
+
+    margin: 1.5vh;
+    padding: 0.5vh;
+    
+    background-color: rgb(221, 239, 229);
+
+    border-radius: 1vh;
+    border: 0px;
+
+    opacity: 0.5;
+
+
+}
+
+.regester_div>form>input:hover{
+    opacity: 1;
+    
+}
+
+.regester_div>form>input:focus{
+    opacity: 1;
+    
+}
+
+.regester_div>form>button{
+
+    padding: 0.5vh 1vh;
+    border-radius: 1vh;
+    background-color: rgb(221, 239, 229);
+    
+
+}
+
+.regester_div>form>button:active{
+    background-color: rgb(125, 209, 163);
+
+}
+
+
+
+
+
+
+@media (max-width:1070px) {
+    #hidden_text{
+        left: 20%;
+    }
+}

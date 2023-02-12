@@ -1,0 +1,135 @@
+
+/* *{
+    scroll-behavior: smooth;
+} */
+
+/* body{
+    margin: 0;
+    padding: 0;
+    
+    
+    background-color: #32064a;
+
+} */
+
+.nav{
+    background-color: #32064a;
+    height: 15vh;
+   color: white;
+   font-size: 5vh;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   text-shadow:0px 0px 10px red;
+
+    /* border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%; */
+
+}
+
+.span{
+    align-self: flex-end;
+    position: absolute;
+    right: 5vh;
+}
+
+
+.main_hadding{
+    font-size: 9vh;
+}
+
+.allBoxs {
+    padding: 5vh 35vh;
+    margin-bottom: 30px;
+
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+   
+}
+
+
+.html{
+   
+    background-color: rgb(245, 245, 70);
+
+    margin-right: 120px;
+}
+
+
+
+.css{
+  
+    background-color: aquamarine;
+
+    margin-right: 100px;
+   
+
+}
+
+.js{
+
+    background-color:  navajowhite;
+
+    margin-right: 80px;
+
+}
+.react{
+
+    background-color:  cyan;
+
+    margin-right: 60px;
+
+
+}
+
+
+li{
+    
+    list-style-position:inside;
+    padding: 10px;
+    font-size: 3vh;
+    list-style-type: circle;
+}
+
+
+
+li::marker{
+    color: red;
+}
+
+
+.move{
+
+    height: 20px;
+    width: 20px;
+    background-color: red;
+
+    position: absolute;
+    left: 10vh;
+
+    box-shadow: 5px 5px 15px black;
+    border-radius: 50%;
+
+    animation: move 1.5s ease-in alternate infinite;
+
+}
+
+
+#aTag{
+    font-weight: bolder;
+}
+
+
+@keyframes move{
+    
+    0%{
+        transform: translateY(50px) rotateZ(0deg) skewX(0deg)  scale(0.5);
+    }
+ 
+    100%{
+        transform: translateY(400px) rotateZ(360deg) skewX(20deg) scale(1.5);
+    }
+
+}

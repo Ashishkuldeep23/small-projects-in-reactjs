@@ -1,0 +1,37 @@
+
+
+/* Below is used in two components (1.Greet user component) and (2.Color and Card component) */
+
+.heading_greetin{
+    border: 1px solid black;
+    font-weight: bolder;
+    font-size: 100px;
+    text-shadow: 2px 2px 2px white;
+}
+
+
+
+
+
+
+/* 
+    ======================================================================================================================================
+    ======================================================================================================================================
+    ======================================================================================================================================
+*/
+
+
+/* Media queries ----> */
+/* Heading of greet user and bgc color -------> */
+
+@media (max-width:820px) {
+    .heading_greetin{
+        font-size: 60px;
+    }
+}
+
+@media (max-width:454px) {
+    .heading_greetin{
+        font-size: 40px;
+    }
+}

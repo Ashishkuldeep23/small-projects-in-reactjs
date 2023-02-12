@@ -1,0 +1,15 @@
+.resturentMainBody{
+    background-color: black;
+    min-height: 100vh;
+    color: yellow;
+
+}
+
+
+#darkBtn{
+        position:relative;
+        left: -48%;
+       
+    border-radius: 100%;
+    z-index: 10;
+}

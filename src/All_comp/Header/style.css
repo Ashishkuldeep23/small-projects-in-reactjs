@@ -1,0 +1,55 @@
+.mainHearder>h1 {
+    margin-bottom: 0;
+    position: sticky;
+    z-index: 100;
+    color: white;
+}
+
+.mainHearder>h1::first-letter{
+    font-size: 3rem;
+    font-family: cursive;
+    text-shadow: -2px 2px 1px white;
+}
+
+.navbar {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+
+.nav-link {
+    border: 1px solid transparent;
+    border-radius: 1vh;
+
+}
+
+.nav-link:hover {
+    transform: translateY(-3px);
+    color: yellow !important;
+    /* font-weight: bold; */
+    border: 1px solid yellow;
+    border-radius: 1vh;
+}
+
+#darkModeBtn {
+    /* margin-right: 55vw; */
+    position: absolute;
+    left: 30px;
+}
+
+
+
+
+
+@media (max-width:576px) {
+
+    .mainHearder>h1::first-letter.mainHearder>h1::first-letter{
+        font-size: 2rem;
+    }
+
+    .nav-link:hover {
+        transform: translateX(-15px);
+    }
+
+}

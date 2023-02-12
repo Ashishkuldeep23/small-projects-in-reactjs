@@ -1,0 +1,184 @@
+
+
+.main{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(216, 216, 253, 0.427);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main_card_data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+
+    
+    /* background-color: black; */
+    color: white;
+
+    min-height: 80vh;
+    width: 20vw;
+    background-color:rgb(44, 41, 41);
+
+    border-radius: 2vh;
+    box-shadow: 20px 20px 50px dimgray;
+
+}
+
+.pic{
+
+    /* height: 10%; */
+    /* width: 70%; */
+
+    height: 25vh;
+    width: auto;
+
+    border-radius: 25%;
+    border: 2px solid yellow;
+    border-bottom: 2px;
+    border-top: 2px;
+
+}
+
+.view_hov{
+    position: absolute;
+    opacity: 0;
+
+    transform: translate(0%, 0%);
+    transition: .5s ease;
+
+}
+
+.name_hov{
+    color: red;
+}
+
+.pic:hover{
+    opacity: 1;
+}
+
+.card:hover .view_hov {
+    opacity: 1;
+    transform: translate(0%, 200%);
+}
+
+
+.detail{
+    padding:0px 20px;
+}
+
+.cen{
+    display: flex;
+    justify-content: center;
+}
+
+.line{
+    text-align: center;
+}
+
+
+.socialLogo{
+    color: white;
+    font-size: 1.2rem;
+}
+
+.socialLogo:hover{
+    transform: scale(1.5);
+}
+
+#print_btn{
+    margin: 2vh;
+    padding: 0.5vh 1.5vh;
+    border-radius: 0.5vh;
+    background-color: blue;
+    color: white;
+    font-weight: 500;
+}
+
+
+#print_btn:hover{
+    background-color: yellow;
+    color: black;
+}
+
+
+
+
+
+@media (max-width:1428px) {
+
+    #main_card_data{
+        width: 99%;
+    }
+
+    .card{
+        width: 30%;
+    }
+
+}
+
+@media (max-width:887px) {
+    #main_card_data{
+        width: 99%;
+    }
+    .card{
+        width: 40%;
+    }
+
+}
+
+@media (max-width:638px) {
+
+    #main_card_data{
+        width: 99%;
+    }
+    .card{
+        width: 50%;
+       
+    }
+
+}
+
+@media (max-width:505px) {
+
+    #main_card_data{
+        width: 99%;
+    }
+    .card{
+        width: 60%;
+        
+    }
+
+}
+
+@media (max-width:412px) {
+
+    #main_card_data{
+        width: 99%;
+    }
+    .card{
+        width: 80%;
+       
+    }
+
+}
+
+@media (max-width:300px) {
+
+    #main_card_data{
+        width: 99%;
+    }
+    .card{
+        width: 98%;
+
+    }
+
+}

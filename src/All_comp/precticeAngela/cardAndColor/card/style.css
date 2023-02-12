@@ -1,0 +1,75 @@
+
+/* 
+    ======================================================================================================================================
+    ======================================================================================================================================
+    ======================================================================================================================================
+*/
+
+
+
+
+/* This used in card and color component -------> (Starts) */
+.cardBody{
+    min-height: 80vh ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh;
+}
+    
+
+.cardOnePrectice{
+    height: 30vh;
+    min-width: 30vw;
+    margin: 2vh;
+}
+
+.cardOnePrectice > .top{
+
+    padding: 3vh 3vh 0vh 3vh;
+
+    background-color: rgb(0, 195, 255);
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    border-top-left-radius: 2vh;
+    border-top-right-radius: 2vh;
+}
+
+.cardOnePrectice > .top > h1{
+    font-family: cursive;
+    font-size: 2rem;
+}
+
+
+.cardOnePrectice > .bottom{
+
+    height: 50%;
+    padding: 0vh 3vh 3vh 3vh;
+    background-color: rgb(124, 248, 253);
+    border-bottom-left-radius: 2vh;
+    border-bottom-right-radius: 2vh;
+    
+}
+
+.avatar{
+
+    position:relative;
+    top: 10vh;
+    right: 0;
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+}
+
+.cardOnePrectice p{
+    margin: 0;
+}
+
+/* This used in card and color component -------> (Ends) */
