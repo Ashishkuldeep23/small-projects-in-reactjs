@@ -8,7 +8,9 @@
 .mainHearder>h1::first-letter{
     font-size: 3rem;
     font-family: cursive;
-    text-shadow: -2px 2px 1px white;
+    text-shadow: -2px 2px 1px #ffc107;
+    color: #ffc107;
+    border-bottom: 1px solid #ffc107;
 }
 
 .navbar {
@@ -40,12 +42,9 @@
 
 
 
+
 /* Copy pasted from collapse header of ToDo (Starts) */
 
-
-.info{
-    width: 90%;
-}
 
 .info_content{
     text-align: start;

@@ -37,8 +37,8 @@ const Header = ({ headerText, makeDarkTrue }) => {
         </p>
 
 
-        <div className=" collapse border border-warning " style={ {backgroundColor : "black"} } id="collapseExample1">
-          <div className=" info_content  py-1 px-2">
+        <div className=" collapse border border-warning border-3 rounded rounded-pill px-1 py-5 py-md-1 mx-1 " style={ {backgroundColor : "black"} } id="collapseExample1">
+          <div className=" info_content rounded rounded-pill py-1 px-2">
 
             <h5 className='text-center'>About This website (Small projects in ReactJS) :-</h5>
 
