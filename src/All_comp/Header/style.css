@@ -40,6 +40,42 @@
 
 
 
+/* Copy pasted from collapse header of ToDo (Starts) */
+
+
+.info{
+    width: 90%;
+}
+
+.info_content{
+    text-align: start;
+    background-color: black;    
+    color: white;
+    margin: auto;
+
+    z-index: 100;
+
+    width: 85vw;
+
+}
+
+
+@media (max-width : 576px) {
+  
+    .info_content{
+        font-size: 0.7rem;
+        width: 95vw;
+    }
+
+}
+
+
+/* Copy pasted from collapse header of ToDo (Ends) */
+
+
+
+
+
 
 
 @media (max-width:576px) {

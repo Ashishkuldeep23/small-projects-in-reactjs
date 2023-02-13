@@ -1,20 +1,20 @@
-import React,{useState} from 'react'
-import {Link} from "react-router-dom"
+import React, { useState } from 'react'
+import { Link } from "react-router-dom"
 
 import "./style.css"
 
-const Header = ({ headerText , makeDarkTrue }) => {
+const Header = ({ headerText, makeDarkTrue }) => {
 
-  const [color , setColor] = useState(false)
+  const [color, setColor] = useState(false)
 
-  const makeToDarkMode = ()=>{
+  const makeToDarkMode = () => {
 
-    if(color === false){
+    if (color === false) {
       document.getElementById("root").style["background-color"] = "#28282b"
       setColor(true)
       makeDarkTrue(true)
       // // // MakeDarkTrue is a function , so i am calling that fuction according to darkMode value , calling by true or false.
-    }else{
+    } else {
       document.getElementById("root").style["background-color"] = "#fff"
       setColor(false)
       makeDarkTrue(false)
@@ -29,6 +29,38 @@ const Header = ({ headerText , makeDarkTrue }) => {
       <div className="mainHearder bg-dark">
 
         <h1 className='text-sm-center  bg-dark  py-1 px-1 fw-bold'>Small React Projects</h1>
+
+        <p className='m-0 text-center '>
+          <a className="btn btn-primary px-2 py-0 bg-dark" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <i className="fa-solid fa-circle-info"></i> Show Info
+          </a>
+        </p>
+
+
+        <div className=" collapse border border-warning " style={ {backgroundColor : "black"} } id="collapseExample1">
+          <div className=" info_content  py-1 px-2">
+
+            <h5 className='text-center'>About This website (Small projects in ReactJS) :-</h5>
+
+            <ol>
+              <li>In this web app many projects are linked together, anyone can navigate throught Nav Bar to see all projects.</li>
+
+              <li>In this project i have used some advance concepts like :- Routing in React , useEffect Hook.</li>
+
+              <li>In this project my main focus is on React core things like :- Use multiple times a functional component , taking input by useState object and other core react concept.. </li>
+
+              <li>Projects are :- Resturent FrontEnd , EmojiPedia , Keeper Notes , Toss , Chat , Card , SingIn , Time , Feedback.</li>
+
+              <li>I'll upload a video of this website on Youtube and paste in the link below.</li>
+
+            </ol>
+
+
+            <p className='text-center m-0'> <i className="fa-brands fa-youtube"></i> -: <a href="https://youtu.be/WM9j3YSJZ5E" rel="noreferrer" target={"_blank".toString()}>https://youtu.be/WM9j3YSJZ5E</a></p>
+            <p className='text-center '>☝️All features of this web app.</p>
+          </div>
+        </div>
+
 
       </div>
 
@@ -58,17 +90,17 @@ const Header = ({ headerText , makeDarkTrue }) => {
 
               <div className="collapse navbar-collapse justify-content-end " id="navbarNavAltMarkup">
                 <div className="navbar-nav ">
-                 
+
                   <Link className="nav-link  text-white mx-2 mx-sm-1 border border-primary rounded" aria-current="page" to={"/"}>Resturent</Link>
                   <Link className="nav-link  text-white  mx-2 mx-sm-1 " to={"/emoji"}>Emoji</Link>
                   <Link className="nav-link  text-white  mx-2 mx-sm-1 " to={"/keeper"}>Keeper</Link>
+                  <Link className="nav-link text-white   mx-2 mx-sm-1 " to={"/login"} >SingIn</Link>
                   <Link className="nav-link text-white   mx-2 mx-sm-1 " to={"/toss"}>Toss</Link>
                   <Link className="nav-link text-white   mx-2 mx-sm-1 " to={"/chat"}>Chat</Link>
                   <Link className="nav-link text-white   mx-2 mx-sm-1 " to={"/card"} >Card</Link>
-                  <Link className="nav-link text-white   mx-2 mx-sm-1 " to={"/login"} >SingIn</Link>
                   <Link className="nav-link text-white   mx-2 mx-sm-1 " to={"/time"} >Time</Link>
                   <Link className="nav-link text-white   mx-2 mx-sm-1 " to={"/feedback"} >Feedback</Link>
-                  
+
                 </div>
               </div>
 
