@@ -40,7 +40,7 @@ const Header = ({ headerText, makeDarkTrue }) => {
         <div className=" collapse border border-warning border-3 rounded rounded-pill px-1 py-5 py-md-1 mx-1 " style={ {backgroundColor : "black"} } id="collapseExample1">
           <div className=" info_content rounded rounded-pill py-1 px-2">
 
-            <h5 className='text-center'>About This website (Small projects in ReactJS) :-</h5>
+            <h5 className='text-center px-5'>About this website  ( Small projects in ReactJS )  :-</h5>
 
             <ol>
               <li>In this web app many projects are linked together, anyone can navigate throught Nav Bar to see all projects.</li>
@@ -56,8 +56,8 @@ const Header = ({ headerText, makeDarkTrue }) => {
             </ol>
 
 
-            <p className='text-center m-0'> <i className="fa-brands fa-youtube"></i> -: <a href="https://youtu.be/WM9j3YSJZ5E" rel="noreferrer" target={"_blank".toString()}>https://youtu.be/WM9j3YSJZ5E</a></p>
-            <p className='text-center '>☝️All features of this web app.</p>
+            <p className='text-center m-0 px-5 '> <i className="fa-brands fa-youtube"></i> -: <a href="https://youtu.be/WM9j3YSJZ5E" rel="noreferrer" target={"_blank".toString()}>https://youtu.be/WM9j3YSJZ5E</a></p>
+            <p className='text-center px-5 '>☝️All features of this web app.</p>
           </div>
         </div>
 

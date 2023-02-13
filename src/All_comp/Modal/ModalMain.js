@@ -4,10 +4,10 @@ const ModalMain = ( { title = "Title Not Given" , data = "Data Not Decleared"  }
 
 
     let styleForBtn = {
-        position:"relative" ,
+        position:"absolute" ,
         top:"25%" ,
-        left:"48%" ,
-        zIndex : "100" ,
+        right:"2%" ,
+        zIndex : 100 ,
     }
 
     return (

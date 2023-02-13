@@ -1,8 +1,16 @@
+.mainHearder{
+    position: relative;
+    z-index: 200;
+}
+
 .mainHearder>h1 {
     margin-bottom: 0;
     position: sticky;
     z-index: 100;
     color: white;
+
+    font-family: 'Lucida Sans',sans-serif ;
+
 }
 
 .mainHearder>h1::first-letter{
@@ -10,13 +18,14 @@
     font-family: cursive;
     text-shadow: -2px 2px 1px #ffc107;
     color: #ffc107;
-    border-bottom: 1px solid #ffc107;
+    border-bottom: 2px solid #dc3545;
+    border-radius: 1vh;
 }
 
 .navbar {
     position: sticky;
     top: 0px;
-    z-index: 100;
+    z-index: 200;
 }
 
 
@@ -45,15 +54,11 @@
 
 /* Copy pasted from collapse header of ToDo (Starts) */
 
-
 .info_content{
     text-align: start;
     background-color: black;    
     color: white;
     margin: auto;
-
-    z-index: 100;
-
     width: 85vw;
 
 }
