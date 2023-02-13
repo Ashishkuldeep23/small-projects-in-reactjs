@@ -28,7 +28,7 @@ const Header = ({ headerText, makeDarkTrue }) => {
     <>
       <div className="mainHearder bg-dark">
 
-        <h1 className='text-sm-center  bg-dark  py-1 px-1 fw-bold'>Small React Projects</h1>
+        <h1 className='text-sm-center  bg-dark  py-1 px-2 fw-bold'>Small React Projects</h1>
 
         <p className='m-0 text-center '>
           <a className="btn btn-primary px-2 py-0 bg-dark" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">

@@ -62,7 +62,7 @@ const Toss = ({darkMode}) => {
 
         <div id='tossId' className={darkMode ? 'container-fluide  bg-white text-white  d-flex justify-content-center align-items-center' : 'container-fluide  bg-dark text-white  d-flex justify-content-center align-items-center'}>
 
-            <ModalMain title={"TOSS"} data={"This is simple toss project , here user can toss coin and as output he or she will get Head , Tail or Again, so try at once."} />
+            <ModalMain title={"TOSS"} data={"This is simple toss project , here user can toss coin and as output he or she will get Head , Tail or Again, so try at once."}  />
             
 
             <div className='col-11 col-sm-7 border border-warning rounded rounded-pill p-3 d-flex flex-column align-items-center ' id='mainHolder'>
