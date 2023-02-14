@@ -57,16 +57,16 @@ function App() {
 
       <Routes>
 
-        <Route path='/' element={ < ResturentMain  darkMode={darkMode} />} />
-        <Route path='/keeper' element={ < Keeper />} />
-        <Route path='/emoji' element={ < EmojiDetails />} />
-        <Route path='/toss' element={ < Toss darkMode={darkMode} />} />
-        <Route path='/chat' element={ < InDeByUseSate darkMode={darkMode} />} />
-        <Route path='/card' element={ < App2 />} />
-        <Route path='/login' element={ < LogIn />} />
-        <Route path='/time' element={ < Time />} />
-        <Route path='/feedback' element={ < FeedBody />} />
-        <Route path="*" element={< ResturentMain  darkMode={darkMode} />}/>
+        <Route exact path='/' element={ < ResturentMain  darkMode={darkMode} />} />
+        <Route exact path='/emoji' element={ < EmojiDetails />} />
+        <Route exact path='/keeper' element={ < Keeper />} />
+        <Route exact path='/login' element={ < LogIn />} />
+        <Route exact path='/toss' element={ < Toss darkMode={darkMode} />} />
+        <Route exact path='/chat' element={ < InDeByUseSate darkMode={darkMode} />} />
+        <Route exact path='/card' element={ < App2 />} />
+        <Route exact path='/time' element={ < Time />} />
+        <Route exact path='/feedback' element={ < FeedBody />} />
+        <Route exact path="*" element={< ResturentMain  darkMode={darkMode} />}/>
       </Routes>
 
 

@@ -13,6 +13,9 @@ import foodItems from "./foodItemsAPI"
 import ModalMain from '../Modal/ModalMain'
 
 
+import ForUser from '../ForUser/ForUser'
+
+
 // // // To see all category of list 
 
 const allListOfCategory = [ ...new Set(foodItems.map((ce) => {
@@ -75,7 +78,7 @@ const ResturentMain = ({darkMode}) => {
 
 
   return (
-    <div id='resturentId' className=' min-vh-100 p-3 d-flex flex-column align-items-center'>
+    <div  id='resturentId' className=' min-vh-100 p-3 d-flex flex-column align-items-center'>
 
       <ModalMain title={"Resturent FrontEnd"} data={"This is a frontend of Resturent website.\nAll Data is created by API.\nMain features are :- Dark mode and About Page(About page created by user click)\nPlease checkout these features\nGive your valuation feedback in feedback section about this Resturent Frontend web."} />
 
@@ -95,6 +98,12 @@ const ResturentMain = ({darkMode}) => {
         !showMoreAboutBtn ? <ResturentBody items={items} color={darkMode} setShowMoreAboutBtn={setShowMoreAboutBtn}  dataOfShowMoreAbout={dataOfShowMoreAbout}/> : <ShowMoreAboutBtn setShowMoreAboutBtn={setShowMoreAboutBtn} color={darkMode} showMoreAboutData={showMoreAboutData} />
       }
 
+
+      {/* At last a message to user */}
+
+      <ForUser data={"Hello Peter"}  className={"text-center py-2 px-3 rounded rounded-pill"}  style={ { backgroundColor : "#DDF0FF"  } }  />
+
+      
     </div>
   )
 }
