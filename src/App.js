@@ -12,7 +12,7 @@ import ResturentMain  from './All_comp/Resturent/ResturentMain';
 import InDeByUseSate from "./All_comp/IncreDcre/InDeByUseState"
 import Toss from "./All_comp/Toss/Toss"
 import Keeper from './All_comp/Keeper/Keeper';
-import EmojiDetails from './All_comp/emojiDetails/emojiDetails';
+import EmojiDetails from './All_comp/emojiDetails/emojiMain';
 import LogIn from "./All_comp/LogIn/conditionalMain"
 import Time from "./All_comp/Time/TimeMain"
 import FeedBody from './All_comp/Feedback/feedBody';
