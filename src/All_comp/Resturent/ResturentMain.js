@@ -101,9 +101,16 @@ const ResturentMain = ({darkMode}) => {
 
       {/* At last a message to user */}
 
-      <ForUser data={"Hello Peter"}  className={"text-center py-2 px-3 rounded rounded-pill"}  style={ { backgroundColor : "#DDF0FF"  } }  />
+      <ForUser 
 
-      
+        data={"The user , if you are here and you like this section of the project then please tell your favorite Food Name in the comment section of the post or tell in the feedback section.Give your valuable comment please."}  
+
+        className={"col-6 text-center py-2 px-5 my-3 rounded  rounded-pill"}  
+
+        style={ { backgroundColor : "#e8f5ffe1" , border:"1px solid "  } } 
+
+      />
+
     </div>
   )
 }

@@ -4,6 +4,9 @@ import React from "react"
 
 import ColorByProps from './colorByProps'
 
+import ForUser from '../../ForUser/ForUser'
+
+
 
 import "./style.css"
 
@@ -38,6 +41,17 @@ const CardAndColorMain = () => {
                     < ColorByProps colorByInner={colorByInner} />
                     <p className="text-center">☝️Write your favourite color and hit Enter</p>
                 </div>
+
+
+                <ForUser
+
+                    data={"The user , if you are here and you like this section of the project then please tell your favorite Color in the comment section of the post or tell in the feedback section.Give your valuable comment please."}
+
+                    className={"col-6 text-center py-2 px-5 my-3 mx-auto rounded  rounded-pill"}
+
+                    style={{ backgroundColor: "#e8f5ffe1", border: "1px solid "  }}
+
+                />
 
 
 

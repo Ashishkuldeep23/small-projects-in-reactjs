@@ -9,6 +9,7 @@ import ModalMain from '../Modal/ModalMain'
 
 import EmojiCarusel from './EmojiCarusel'
 
+import ForUser from '../ForUser/ForUser'
 
 
 const EmojiDetails = () => {
@@ -82,8 +83,8 @@ const EmojiDetails = () => {
 
                                 {/* Search experimet here -------------------> */}
 
-                                {   
-                                    
+                                {
+
                                     emojiApi.filter((item) => {
 
                                         if (list === "") {
@@ -108,6 +109,19 @@ const EmojiDetails = () => {
 
 
 
+
+                                <ForUser
+
+                                    data={"The user , if you are here and you like this section of the project then please tell your favorite Emoji in the comment section of the post or tell in the feedback section.Give your valuable comment please."}
+
+                                    className={"col-6 text-center py-2 px-5 my-3 mx-auto rounded  rounded-pill"}
+
+                                    style={{ backgroundColor: "#e8f5ffe1", border: "1px solid " }}
+
+                                />
+
+
+
                             </div>
 
                         </div>
@@ -119,6 +133,9 @@ const EmojiDetails = () => {
 
 
                 </div>
+
+
+
 
 
             </div>
