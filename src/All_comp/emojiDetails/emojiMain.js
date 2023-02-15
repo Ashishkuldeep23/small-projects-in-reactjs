@@ -37,13 +37,15 @@ const EmojiDetails = () => {
 
 
                                 <input
-                                    className='col-10 mt-5 mb-0 text-center fw-bold fs-3'
+                                    className='col-12 col-lg-10 mt-5 mb-0 text-center fw-bold fs-5'
                                     id='emojiSearch'
                                     type="text"
                                     placeholder='Search Emoji by Name or Number Or Emoji'
                                     onChange={(e) => {
                                         setList(e.target.value)
                                     }}
+                                    value={list}
+
                                 />
 
                             </div>
