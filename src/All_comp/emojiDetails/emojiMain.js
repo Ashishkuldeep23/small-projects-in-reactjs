@@ -15,7 +15,7 @@ const EmojiDetails = () => {
 
     const [list, setList] = useState("")
 
-    console.log(list)
+    // console.log(list)
 
     return (
         <>
@@ -37,9 +37,10 @@ const EmojiDetails = () => {
 
 
                                 <input
+                                    className='col-10 mt-5 mb-0 text-center fw-bold fs-3'
                                     id='emojiSearch'
                                     type="text"
-                                    placeholder='Search Emoji by Name'
+                                    placeholder='Search Emoji by Name or Number Or Emoji'
                                     onChange={(e) => {
                                         setList(e.target.value)
                                     }}
@@ -75,19 +76,12 @@ const EmojiDetails = () => {
                                 } */}
 
 
-                                {/* Experiment here ------------------> */}
-
-                                {/* {
-                                    emojiApi.map( (item)=>{
-                                        return( <div>{item.aboutEmoji.substring(0,100)} <a href="">More..</a></div> )
-                                    } )
-
-                                } */}
 
 
                                 {/* Search experimet here -------------------> */}
 
-                                {
+                                {   
+                                    
                                     emojiApi.filter((item) => {
 
                                         if (list === "") {
@@ -106,7 +100,6 @@ const EmojiDetails = () => {
                                     }).map((item) => {
                                         return <EmojiCart key={item.id} data={item} />
                                     })
-
 
 
                                 }
