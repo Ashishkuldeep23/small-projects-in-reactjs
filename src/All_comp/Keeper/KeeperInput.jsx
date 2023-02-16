@@ -16,7 +16,7 @@ const KeeperInput = ( {addNote , oneNote , changeHandle } ) => {
 
                 <textarea name="note" placeholder='Your Note' id="" rows={isClicked ? "5" : "1"} value={oneNote.note} onChange={changeHandle} onKeyDown={ (e)=>{ if(e.key === "Enter") {addNote()} } }  onClick={ ()=>{setIsClicked(true)} } ></textarea>
 
-                <button onClick={addNote}><i className="fa-solid fa-plus"></i></button>
+                <button className='py-1' onClick={addNote}><i className="fa-solid fa-plus"></i></button>
 
             </div>
         </>

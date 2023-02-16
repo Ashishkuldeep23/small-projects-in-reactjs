@@ -105,9 +105,9 @@ const ResturentMain = ({darkMode}) => {
 
         data={"The user , if you are here and you like this section of the project then please tell your favorite Food Name in the comment section of the post or tell in the feedback section.Give your valuable comment please."}  
 
-        className={"col-6 text-center py-2 px-5 my-3 rounded  rounded-pill"}  
+        className={" col-12  col-md-6 text-center p-3 my-4 rounded  rounded-pill"}  
 
-        style={ { backgroundColor : "#e8f5ffe1" , border:"1px solid "  } } 
+        style={ { backgroundColor : "#e8f5ffa8" , border:"1px solid "  } } 
 
       />
 

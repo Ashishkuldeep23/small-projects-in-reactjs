@@ -10,6 +10,9 @@ import KeeperInput from './KeeperInput.jsx'
 import ModalMain from '../Modal/ModalMain'
 
 
+
+// // // This fn is used to get all notes when refresh from localStorage -------------->
+
 const getAllNodeFromLocal = ()=>{
 
   let data = localStorage.getItem("KeeperData")
@@ -23,6 +26,9 @@ const getAllNodeFromLocal = ()=>{
 
 }
 
+
+
+// //  // This is main fn ------------------->
 
 const Keeper = () => {
 
