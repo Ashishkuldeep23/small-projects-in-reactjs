@@ -5,6 +5,12 @@ import App from './App';
 
 // import {BrowserRouter} from "react-router-dom"
 
+/**
+ * Perviously i'm using BrowserRouter but on refresh this giving me error so now i'm using HashRouter this not giving me error. 
+ */
+
+
+
 import { HashRouter } from 'react-router-dom'
 
 
