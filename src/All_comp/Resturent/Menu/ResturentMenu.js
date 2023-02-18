@@ -19,7 +19,7 @@ const ResturentMenu = ({ findFood, menuList , color }) => {
                 <ul className="nav nav-tabs justify-content-center">
 
                     <li className="nav-item" onClick={() => { findFood("All") }} >
-                        <a className="nav-link active" aria-current="page" href="#resturentId">All</a>
+                        <a className="nav-link active" aria-current="page" href="#">All</a>
                     </li>
 
                     {/* Two all coming becz left from li tag and right from in unique list  */}

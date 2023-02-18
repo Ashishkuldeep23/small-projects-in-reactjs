@@ -14,7 +14,7 @@ const ModalMain = ( { title = "Title Not Given" , data = "Data Not Decleared" , 
         <>
 
             {/* <!-- Button trigger modal --> */}
-            <button type="button" className="btn btn-primary btn-sm rounded rounded-circle px-2 py-1" style={ styleForBtn  } data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" className="btn btn-primary btn-sm rounded rounded-circle px-3 py-1" style={ styleForBtn  } data-bs-toggle="modal" data-bs-target="#exampleModal">
             <i className="fa-solid fa-info"></i>
             </button>
 
