@@ -108,18 +108,21 @@ const EmojiDetails = () => {
                                 }
 
 
+                                <div style={{width : "100%"}} >
+                                    {/* All put inside a div and div given 100% with becz i need below div always below -----> */}
 
 
-                                <ForUser
+                                    <ForUser
 
-                                    data={"The user , if you are here and you like this section of the project then please tell your favorite Emoji in the comment section of the post or tell in the feedback section.Give your valuable comment please."}
+                                        data={"The user , if you are here and you like this section of the project then please tell your favorite Emoji in the comment section of the post or tell in the feedback section.Give your valuable comment please."}
 
-                                    className={" col-11  col-md-6 text-center p-3  my-4 rounded  rounded-pill text-center mx-auto"}
+                                        className={" col-11  col-md-6 text-center p-3  my-4 rounded  rounded-pill text-center mx-auto"}
 
-                                    style={{ backgroundColor: "#e8f5ffa8", border: "1px solid " }}
+                                        style={{ backgroundColor: "#e8f5ffa8", border: "1px solid ", height: "fit-content" }}
 
-                                />
+                                    />
 
+                                </div>
 
 
                             </div>
