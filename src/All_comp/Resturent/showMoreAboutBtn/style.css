@@ -76,9 +76,10 @@
 }
 
 
-/* .card_footer_div{
+.card_footer_div>div{
     border: 1px solid ;
-} */
+    border-radius: 8vh !important;
+}
 
 
 
@@ -86,8 +87,8 @@
 /* Copied data ------------> */
 
 
-
-#about_img {
+/* Below is not using now (Image removed) -----------> */
+/* #about_img {
     height: 25vh;
     width: 25vh;
     border-radius: 50%;
@@ -102,11 +103,11 @@
     border-bottom: 4px solid red;
     border-radius: 2vh;
     transform: scale(1.4);
-}
+} */
 
 
 
-.logos {
+.logosInShowMore {
     margin: 2vh;
     height: 35px;
     width: 40px;
@@ -115,11 +116,11 @@
     transition: ease-in-out transform 0.15s;
 }
 
-.logos:hover {
-    transform: scale(1.4);
+.logosInShowMore:hover {
+    transform: scale(1.4) rotate(180deg) ;
 }
 
-.logos:active {
+.logosInShowMore:active {
     background-color: yellow;
 }
 
@@ -159,20 +160,8 @@
 
     /* Copied data ------------> */
 
-    .aboutMeMyName {
-        font-size: 1.5rem;
-    }
 
-    .aboutMeText {
-        font-size: 0.8rem;
-    }
-
-    #about_img {
-        height: 20vh;
-        width: 20vh;
-    }
-
-    .logos {
+    .logosInShowMore {
         height: 28px;
         width: 32px;
         margin: 0.5vh;
