@@ -18,6 +18,8 @@
     align-items: center;
     justify-content: center;
 
+    flex-direction: column;
+
     background-color: rgba(145, 212, 175, 0.896);
 
     background-image: url("https://www.transparenttextures.com/patterns/hoffman.png");
@@ -41,20 +43,19 @@
 
 
 #hidden_text{
-    position: absolute;
-    top:25vh ;
-    left: 39%;
     text-align: center;
-    display: none;
     color: red;
     line-break: loose;
+    visibility: hidden;
 }
 
 
 
 
-.conditional_main > div:hover #hidden_text{
-    display: block;
+.conditional_main:hover #hidden_text{
+
+    visibility: visible;
+
 }
 
 
