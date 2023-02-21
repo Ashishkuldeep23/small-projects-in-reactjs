@@ -50,13 +50,12 @@ const Header = ({ headerText, makeDarkTrue }) => {
               <li>In this project my main focus is on React core things like :- Use multiple times a functional component , taking input by useState object and other core react concept.. </li>
 
               <li>Projects are :- Restaurant FrontEnd , EmojiPedia , Keeper Notes , Toss , Chat , Card , SingIn , Time , Feedback.</li>
-
-              <li>I'll upload a video of this website on Youtube and paste in the link below.</li>
+      
 
             </ol>
 
 
-            <p className='text-center m-0 px-5 '> <i className="fa-brands fa-youtube"></i> -: <a href="https://youtu.be/WM9j3YSJZ5E" rel="noreferrer" target={"_blank".toString()}>https://youtu.be/WM9j3YSJZ5E</a></p>
+            <p className='text-center m-0 px-5 '> <i className="fa-brands fa-youtube"></i> -: <a href="https://youtu.be/07LLC2gBOR8" rel="noreferrer" target={"_blank".toString()}>https://youtu.be/07LLC2gBOR8</a></p>
             <p className='text-center px-5 '>☝️All features of this web app.</p>
           </div>
         </div>
