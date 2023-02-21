@@ -2,11 +2,11 @@ const Menu = [
     {
       id: 1,
       image: "https://images.livehindustan.com/uploadimage/photostory/momos1484727906_big~18~01~2017~1489334693_500X375.jpg",
-      name: "Momo",
+      name: "Momos",
       category: "Breakfast",
       price: "12₹",
       description:
-        "I love Momo realy oo yues  Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in.",
+        "I love Momos realy oo yues  Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in.",
     },
   
     {
