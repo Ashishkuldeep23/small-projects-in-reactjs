@@ -118,10 +118,11 @@
 
 .logosInShowMore:hover {
     transform: scale(1.4) rotate(180deg) ;
+    background-color: yellow;
 }
 
 .logosInShowMore:active {
-    background-color: yellow;
+    background-color: transparent;
 }
 
 

@@ -169,11 +169,12 @@
 }
 
 .logos:hover{
-    transform: scale(1.4);
+    background-color: yellow;
+    transform: scale(1.4) rotate(180deg);
 }
 
 .logos:active{
-    background-color: yellow;
+    background-color: transparent;
 }
 
 /* About Me css -------------> (Ends) */
