@@ -126,6 +126,7 @@ const ShowAllFeeds = () => {
                                                  feedbackMsg={item.feedbackMsg}
                                                  reply={item.reply }
                                                  whenCreated={item.whenCreated}
+                                                 index={index}
                                             />)   } )  
 
                           
