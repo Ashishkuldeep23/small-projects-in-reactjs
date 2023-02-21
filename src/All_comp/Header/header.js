@@ -49,7 +49,7 @@ const Header = ({ headerText, makeDarkTrue }) => {
 
               <li>In this project my main focus is on React core things like :- Use multiple times a functional component , taking input by useState object and other core react concept.. </li>
 
-              <li>Projects are :- Resturent FrontEnd , EmojiPedia , Keeper Notes , Toss , Chat , Card , SingIn , Time , Feedback.</li>
+              <li>Projects are :- Restaurant FrontEnd , EmojiPedia , Keeper Notes , Toss , Chat , Card , SingIn , Time , Feedback.</li>
 
               <li>I'll upload a video of this website on Youtube and paste in the link below.</li>
 
@@ -91,7 +91,7 @@ const Header = ({ headerText, makeDarkTrue }) => {
               <div className="collapse navbar-collapse justify-content-end " id="navbarNavAltMarkup">
                 <div className="navbar-nav ">
 
-                  <Link className="nav-link  text-white mx-2 mx-sm-1 border border-primary rounded" aria-current="page" to={"/"}>Resturent</Link>
+                  <Link className="nav-link  text-white mx-2 mx-sm-1 border border-primary rounded" aria-current="page" to={"/"}>Restaurant</Link>
                   <Link className="nav-link  text-white  mx-2 mx-sm-1 " to={"/emoji"}>Emoji</Link>
                   <Link className="nav-link  text-white  mx-2 mx-sm-1 " to={"/keeper"}>Keeper</Link>
                   <Link className="nav-link text-white   mx-2 mx-sm-1 " to={"/login"} >SingIn</Link>

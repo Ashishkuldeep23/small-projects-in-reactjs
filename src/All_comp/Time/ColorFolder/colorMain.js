@@ -45,7 +45,7 @@ const CardAndColorMain = () => {
 
                 <ForUser
 
-                    data={"The user , if you are here and you like this section of the project then please tell your favorite Color in the comment section of the post or tell in the feedback section.Give your valuable comment please."}
+                    data={"The user , if you are here and you like this section of the project then please tell your favorite Color in the comment section of the post or tell me in the feedback section.Give your valuable comment please."}
 
                     className={" col-12  col-md-6 text-center p-3 my-4 rounded  rounded-pill mx-auto"}
 

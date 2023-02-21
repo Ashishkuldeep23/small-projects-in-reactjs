@@ -80,7 +80,7 @@ const ResturentMain = ({darkMode}) => {
   return (
     <div  id='resturentId' className=' min-vh-100 p-3 d-flex flex-column align-items-center'>
 
-      <ModalMain title={"Resturent FrontEnd"} data={"This is a frontend of Resturent website.\nAll Data is created by API.\nMain features are :- Dark mode and About Page(About page created by user click)\nPlease checkout these features\nGive your valuation feedback in feedback section about this Resturent Frontend web."} />
+      <ModalMain title={"Restaurant FrontEnd"} data={"This is a frontend of Restaurant website.\nAll Data is created by API.\nMain features are :- Dark mode and About Page(About page created by user click)\nPlease checkout these features\nGive your valuation feedback in feedback section about this Restaurant Frontend web."} />
 
       {/* <ResturentMenu findFood ={findFood}  menuList={menuList}   color={darkMode} /> */}
       {/* <ResturentBody items={items} color={darkMode} /> */}
@@ -103,7 +103,7 @@ const ResturentMain = ({darkMode}) => {
 
       <ForUser 
 
-        data={"The user , if you are here and you like this section of the project then please tell your favorite Food Name in the comment section of the post or tell in the feedback section.Give your valuable comment please."}  
+        data={"The user , if you are here and you like this section of the project then please tell your favorite Food Name in the comment section of the post or tell me in the feedback section.Give your valuable comment please."}  
 
         className={" col-12  col-md-6 text-center p-3 my-4 rounded  rounded-pill"}  
 
