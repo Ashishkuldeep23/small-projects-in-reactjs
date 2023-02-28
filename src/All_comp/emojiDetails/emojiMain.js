@@ -14,9 +14,9 @@ import ForUser from '../ForUser/ForUser'
 
 const EmojiDetails = () => {
 
-    const [list, setList] = useState("")
+    const [inputText, setInputText] = useState("")
 
-    // console.log(list)
+    // console.log(inputText)
 
     return (
         <>
@@ -43,9 +43,9 @@ const EmojiDetails = () => {
                                     type="text"
                                     placeholder='Search Emoji by Name or Number Or Emoji'
                                     onChange={(e) => {
-                                        setList(e.target.value)
+                                        setInputText(e.target.value)
                                     }}
-                                    value={list}
+                                    value={inputText}
 
                                 />
 
@@ -87,16 +87,16 @@ const EmojiDetails = () => {
 
                                     emojiApi.filter((item) => {
 
-                                        if (list === "") {
+                                        if (inputText === "") {
                                             return item
                                         }
-                                        else if (item.nameOfEmoji.toLocaleLowerCase().includes(list.toLocaleLowerCase())) {
+                                        else if (item.nameOfEmoji.toLocaleLowerCase().includes(inputText.toLocaleLowerCase())) {
                                             return item
                                         }
-                                        else if (item.emoji.includes(list)) {
+                                        else if (item.emoji.includes(inputText)) {
                                             return item
                                         }
-                                        else if (item.id.includes(list)) {
+                                        else if (item.id.includes(inputText)) {
                                             return item
                                         }
 
