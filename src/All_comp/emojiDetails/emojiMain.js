@@ -18,6 +18,41 @@ const EmojiDetails = () => {
 
     // console.log(inputText)
 
+
+    function emojiCardShowWithSearch(){
+
+        
+        // // // By this way i can calculate the length of return array from filter and now i'm able to show error msg if no one found --------->
+        // // // This is the best for now to making run time search in React. 
+
+        let returnArrByFilter = emojiApi.filter((item) => {
+
+            if (inputText === "") {
+                return item
+            }
+            else if (item.nameOfEmoji.toLocaleLowerCase().includes(inputText.toLocaleLowerCase())) {
+                return item
+            }
+            else if (item.emoji.includes(inputText)) {
+                return item
+            }
+            else if (item.id.includes(inputText)) {
+                return item
+            }
+
+        }).map((item) => {
+            return <EmojiCart key={item.id} data={item} />
+        })
+
+        return (returnArrByFilter.length > 0) ? returnArrByFilter  : <h1 className='my-5 mx-1 text-center text-danger fw-bold'>Emoji Not Found with this keyword :- {inputText}</h1>
+
+
+    }
+
+
+
+
+
     return (
         <>
             <div className="mainEmoji" id='mainEmoji'>
@@ -56,7 +91,7 @@ const EmojiDetails = () => {
 
                             <div className='row'>
 
-                                {/* Dummy data */}
+                                {/* Dummy data for very first time i'm using this ---->> you can remove now. */}
                                 {/* <div className="col-4  p-5 ">
 
                                     <div className='emoji_card text-danger text-center'>
@@ -81,31 +116,42 @@ const EmojiDetails = () => {
 
 
 
-                                {/* Search experimet here -------------------> */}
+                                {/* Card show by filter and map (For search )-------------------> */}
 
                                 {
 
-                                    emojiApi.filter((item) => {
+                                    // emojiApi.filter((item) => {
 
-                                        if (inputText === "") {
-                                            return item
-                                        }
-                                        else if (item.nameOfEmoji.toLocaleLowerCase().includes(inputText.toLocaleLowerCase())) {
-                                            return item
-                                        }
-                                        else if (item.emoji.includes(inputText)) {
-                                            return item
-                                        }
-                                        else if (item.id.includes(inputText)) {
-                                            return item
-                                        }
+                                    //     if (inputText === "") {
+                                    //         return item
+                                    //     }
+                                    //     else if (item.nameOfEmoji.toLocaleLowerCase().includes(inputText.toLocaleLowerCase())) {
+                                    //         return item
+                                    //     }
+                                    //     else if (item.emoji.includes(inputText)) {
+                                    //         return item
+                                    //     }
+                                    //     else if (item.id.includes(inputText)) {
+                                    //         return item
+                                    //     }
 
-                                    }).map((item) => {
-                                        return <EmojiCart key={item.id} data={item} />
-                                    })
+                                    // }).map((item) => {
+                                    //     return <EmojiCart key={item.id} data={item} />
+                                    // })
 
 
                                 }
+
+
+                                {/* Let's experiment with search for not found error ------->>> But this is best for now becuse by this i can give a err msg if no one get matched ----> */}
+
+
+                                {
+
+                                    emojiCardShowWithSearch()
+
+                                }
+
 
 
                                 <div style={{width : "100%"}} >
