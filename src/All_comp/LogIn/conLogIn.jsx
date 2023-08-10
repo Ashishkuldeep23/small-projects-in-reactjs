@@ -5,7 +5,7 @@ import ConInput from './ConInput'
 
 const ConLogIn = ({setIsUserValid}) => {
 
-    const [isregiser, setIsregister] = useState(false)
+    const [isLoginEd, setIsLoginEd] = useState(false)
 
     const [userInput, setUserInput] = useState({
         email: "",
@@ -65,6 +65,8 @@ const ConLogIn = ({setIsUserValid}) => {
         let email = actualData.email
         let pass = actualData.pass
 
+
+        // // // Bad Entry 400 (Email and pass not matched)
         if (email !== userInput.email) {
             return alert("Email no matched")
         }
@@ -76,8 +78,8 @@ const ConLogIn = ({setIsUserValid}) => {
 
 
         alert("LogIn successful\nYour name is: " + actualData.fName + " " + actualData.lName)
-        setIsregister(true)
-        localStorage.setItem( "isRegister" , "yes2" )
+        setIsLoginEd(true)
+        localStorage.setItem( "isLoginEd" , "yes2" )
 
     }
 
@@ -85,7 +87,7 @@ const ConLogIn = ({setIsUserValid}) => {
 
 
     let storedEmail , storedName
-    if(isregiser){
+    if(isLoginEd){
 
         let storedData = localStorage.getItem("userData")
         let actualData = JSON.parse(storedData)
@@ -98,8 +100,8 @@ const ConLogIn = ({setIsUserValid}) => {
 
     function deleteLocaldata (){
         localStorage.removeItem("userData")
-        localStorage.removeItem("isRegister")
-        setIsregister(false)
+        localStorage.removeItem("isLoginEd")
+        setIsLoginEd(false)
         setIsUserValid(false)
         alert("Data Deleted")
 
@@ -111,14 +113,14 @@ const ConLogIn = ({setIsUserValid}) => {
 
     useEffect( ()=>{
 
-        let isRegister = localStorage.getItem('isRegister')
+        let isLoginEd = localStorage.getItem('isLoginEd')
 
-        console.log(isRegister)
+        // console.log(isLoginEd)
 
-        console.log("I am loaded")
+        // console.log("I am loaded")
     
-        if( isRegister === "yes2" ){
-            setIsregister(true)
+        if( isLoginEd && isLoginEd === "yes2" ){
+            setIsLoginEd(true)
         }
     
     } )
@@ -134,9 +136,9 @@ const ConLogIn = ({setIsUserValid}) => {
 
                 {
 
-                    (isregiser)
+                    (isLoginEd)
                         ? <div className='text-center'> 
-
+                            <img src="https://cdn0.iconfinder.com/data/icons/users-android-l-lollipop-icon-pack/24/user-512.png" alt="User" />
                             <h2>{storedName}</h2>
                             <p>{storedEmail}</p>
                             <button className='px-2 py-1 bg-danger text-white fw-bold border rounded m-2' onClick={deleteLocaldata}>Delete Data</button>
@@ -148,9 +150,27 @@ const ConLogIn = ({setIsUserValid}) => {
 
                                 <p className='text-center'>{userInput.email}</p>
 
-                                <ConInput type="text" placeholder="Email" name="email" required={true} onChange={changeHandler} value={userInput.email} id={"1"} />
+                                <ConInput 
+                                    id={"1"}
+                                    type="text" 
+                                    placeholder="Email" 
+                                    name="email" 
+                                    required={true} 
+                                    onChange={changeHandler} 
+                                    value={userInput.email} 
+                                />
 
-                                <ConInput type="password" placeholder="Password" name="pass" onChange={changeHandler} required={true} value={userInput.pass} id={"2"}  />
+                                <ConInput 
+                                    id={"2"}
+                                    type="password" 
+                                    placeholder="Password"
+                                    name="pass"
+                                    onChange={changeHandler}
+                                    required={true}
+                                    value={userInput.pass}
+                                    onClick={submitbtn}
+                                    onKeyDownValue={true}
+                                />
 
                                 <ConInput type="Button" defaultValue="LogIn" onClick={submitbtn} id={"3"}  />
 

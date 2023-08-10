@@ -17,7 +17,7 @@ const ConRegister = ({ setIsUserValid }) => {
   })
 
 
-  // // // Priviously i'm doing this to many if elase here ---->
+  // // // Priviously i'm doing this to many if elase here (Long Process) ---->
 
   const changeHandle = (event) => {
     const { value, name } = event.target
@@ -68,14 +68,21 @@ const ConRegister = ({ setIsUserValid }) => {
 
     const { name, value } = event.target
 
+
+    // // // // Two ways to do this ------->
+
+    // // 1st way (Here in set function i'm taking old data)---->
     setUserData((preData) => {
-
-      return {
-        ...preData,
-        [name]: value
-      }
-
+      return { ...preData ,[name]: value }
     })
+    
+
+
+    // // 2nd way (Here i'm not taking any old data becoz i have in userData var , directly setting new data.) ---->
+
+
+    setUserData( {...userData , [event.target.name] : event.target.value} )
+
 
 
   }
@@ -113,11 +120,13 @@ const ConRegister = ({ setIsUserValid }) => {
 
 
 
-    localStorage.setItem("userData", JSON.stringify(userData))
-    setUserData({ fName: "", lName: "", email: "", pass: "" })
-    event.preventDefault()
+    localStorage.setItem("userData", JSON.stringify(userData))    // // // Set data locally in LocalHost
 
-    alert("form submitted")
+    setUserData({ fName: "", lName: "", email: "", pass: "" })   // // // Set field to normal
+
+    event.preventDefault()     // // // don't refresh page 
+
+    alert("form submitted")    // // // An Alert msg
 
     setIsUserValid(true)
   }
@@ -142,11 +151,50 @@ const ConRegister = ({ setIsUserValid }) => {
         <p className='text-center'>{userData.email}</p>
 
         <form>
-          <ConInput type="text" placeholder="First Name" required={true} value={userData.fName} name="fName" onChange={changeHandleNew} />
-          <ConInput type="text" placeholder="Last Name" required={true} value={userData.lName} name="lName" onChange={changeHandleNew} />
-          <ConInput type="text" placeholder="Email" required={true} value={userData.email} name="email" onChange={changeHandleNew} />
-          <ConInput type="password" placeholder="Password" required={true} value={userData.pass} name="pass" onChange={changeHandleNew} />
-          <ConInput type="button" defaultValue="Registeration" onClick={submitFunc} />
+          <ConInput 
+            type="text"
+            placeholder="First Name" 
+            required={true} 
+            value={userData.fName} 
+            name="fName" 
+            onChange={changeHandleNew}
+          />
+
+          <ConInput 
+            type="text" 
+            placeholder="Last Name" 
+            required={true} 
+            value={userData.lName} 
+            name="lName" 
+            onChange={changeHandleNew} 
+          />
+
+          <ConInput 
+            type="text" 
+            placeholder="Email" 
+            required={true} 
+            value={userData.email} 
+            name="email" 
+            onChange={changeHandleNew} 
+          />
+
+          <ConInput 
+            type="password"
+            placeholder="Password"
+            required={true}
+            value={userData.pass}
+            name="pass"
+            onChange={changeHandleNew}
+            onKeyDownValue={true}
+            onClick={submitFunc}
+            
+          />
+
+          <ConInput 
+            type="button"
+            defaultValue="Registeration"
+            onClick={submitFunc}
+          />
         </form>
 
       </div>

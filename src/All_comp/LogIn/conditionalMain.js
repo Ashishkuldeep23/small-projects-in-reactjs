@@ -11,30 +11,9 @@ import ModalMain from '../Modal/ModalMain'
 
 const ConditionalMain = () => {
 
-    const [isUserValid, setIsUserValid] = useState(false)
+    const [isUserValid, setIsUserValid] = useState(false)    // // // Is user regersed or not.
 
-    const [name, setName] = useState("YourName")
-
-    const [fnameInput, setFnameInput] = useState("FName")
-    const [lnameInput, setLnameInput] = useState("LName")
-
-
-    // // // This fn is using before when showing output on div --------->
-    function FnameChangeHandler(e) {
-        // // console.log(e.target.value)
-        setFnameInput(e.target.value)
-    }
-
-    function LnameChangeHandler(e) {
-        // // console.log(e.target.value)
-        setLnameInput(e.target.value)
-    }
-
-    function submitName() {
-        setName(`${fnameInput} ${lnameInput}`)
-    }
-
-
+    
 
     useEffect(() => {
 

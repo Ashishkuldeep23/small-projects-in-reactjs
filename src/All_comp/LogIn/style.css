@@ -69,6 +69,7 @@
 
 
 
+
 /*  Conditional css here ----> (Ends)  */
 
 
@@ -133,6 +134,25 @@
 
 }
 
+
+
+/*  Image css code Here */
+
+.regester_div img{
+    height: 10vh;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+    padding: 1vh;
+    outline: 2px solid black;
+    transition: all 0.1s ease-in-out;
+}
+
+
+.regester_div img:hover{
+    outline:3px solid black ;
+    outline-offset: 3px;
+    border: 0;
+}
 
 
 
