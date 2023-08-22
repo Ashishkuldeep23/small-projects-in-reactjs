@@ -53,18 +53,15 @@
 
 
 .conditional_main:hover #hidden_text{
-
     visibility: visible;
-
 }
 
 
-.conditional_main > div > h1{
 
+.conditional_main > div > h1{
     font-family: cursive;
     font-weight: bolder;
     margin-bottom: 5vh;
-
 }
 
 
@@ -88,16 +85,35 @@
 
 
 .regester_div{
-
     border: 2px solid transparent;
-
-
 }
 
-.regester_div>form>input{
-    display: block;
 
-    margin: 1.5vh;
+
+/*  Image css code Here */
+
+.regester_div img{
+    height: 15vh;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+    padding: .2vh;
+    outline: 2px solid black;
+    transition: all 0.1s ease-in-out;
+}
+
+
+.regester_div img:hover{
+    outline:3px solid black ;
+    outline-offset: 3px;
+    border: 0;
+}
+
+
+
+
+
+.regester_div input{
+    display: block;
     padding: 0.5vh;
     
     background-color: rgb(221, 239, 229);
@@ -110,12 +126,11 @@
 
 }
 
-.regester_div>form>input:hover{
-    opacity: 1;
-    
+.regester_div>form input:hover{
+    opacity: 1; 
 }
 
-.regester_div>form>input:focus{
+.regester_div>form input:focus{
     opacity: 1;
     
 }
@@ -135,24 +150,6 @@
 }
 
 
-
-/*  Image css code Here */
-
-.regester_div img{
-    height: 10vh;
-    /* border: 2px solid black; */
-    border-radius: 50%;
-    padding: 1vh;
-    outline: 2px solid black;
-    transition: all 0.1s ease-in-out;
-}
-
-
-.regester_div img:hover{
-    outline:3px solid black ;
-    outline-offset: 3px;
-    border: 0;
-}
 
 
 

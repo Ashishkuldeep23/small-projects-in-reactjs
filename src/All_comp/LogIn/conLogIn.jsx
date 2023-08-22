@@ -86,14 +86,15 @@ const ConLogIn = ({setIsUserValid}) => {
 
 
 
-    let storedEmail , storedName
+    let storedEmail , storedName , storedImg
     if(isLoginEd){
 
         let storedData = localStorage.getItem("userData")
         let actualData = JSON.parse(storedData)
 
-        storedName = actualData.fName + " " + actualData.lName
+        storedName = actualData.fullName
         storedEmail = actualData.email
+        storedImg = actualData.url
     }
 
 
@@ -138,7 +139,7 @@ const ConLogIn = ({setIsUserValid}) => {
 
                     (isLoginEd)
                         ? <div className='text-center'> 
-                            <img src="https://cdn0.iconfinder.com/data/icons/users-android-l-lollipop-icon-pack/24/user-512.png" alt="User" />
+                            <img src={storedImg} alt="User" />
                             <h2>{storedName}</h2>
                             <p>{storedEmail}</p>
                             <button className='px-2 py-1 bg-danger text-white fw-bold border rounded m-2' onClick={deleteLocaldata}>Delete Data</button>

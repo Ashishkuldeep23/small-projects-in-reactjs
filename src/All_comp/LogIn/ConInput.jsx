@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ConInput = ({type , placeholder , value , name , required = false , onChange , id = "" , onClick = ()=>{} , defaultValue , onKeyDownValue = false }) => {
+const ConInput = ({type , className = "w-100" , placeholder , value , name , required = false , onChange , id = "" , onClick = ()=>{} , defaultValue , onKeyDownValue = false }) => {
 
   // // // defaultValue is used in Buttons , value is not working that's why.
   // // // onKeyDownValue is var value that holds true and false means if value given true then on perform somthing.
@@ -13,7 +13,7 @@ const ConInput = ({type , placeholder , value , name , required = false , onChan
     <> 
         <input 
           id={id}
-          className='d-block w-100 px-3 py-1 my-2 border border-danger rounded text-primary '
+          className={` d-block  px-3 py-1 my-2 border border-danger rounded text-primary ${className}`}
           type={type}
           name={name}
           placeholder={placeholder} 

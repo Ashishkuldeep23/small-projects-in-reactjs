@@ -10,12 +10,14 @@ import "./style.css"
 const ConRegister = ({ setIsUserValid }) => {
 
   const [userData, setUserData] = useState({
-    fName: "",
-    lName: "",
+    fullName: "",
+    url: "",
     email: "",
     pass: ""
   })
 
+
+  const [passType , setPassType] = useState("password")
 
   // // // Priviously i'm doing this to many if elase here (Long Process) ---->
 
@@ -72,16 +74,16 @@ const ConRegister = ({ setIsUserValid }) => {
     // // // // Two ways to do this ------->
 
     // // 1st way (Here in set function i'm taking old data)---->
-    setUserData((preData) => {
-      return { ...preData ,[name]: value }
-    })
-    
+    // setUserData((preData) => {
+    //   return { ...preData, [name]: value }
+    // })
+
 
 
     // // 2nd way (Here i'm not taking any old data becoz i have in userData var , directly setting new data.) ---->
 
 
-    setUserData( {...userData , [event.target.name] : event.target.value} )
+    setUserData({ ...userData, [event.target.name]: event.target.value })
 
 
 
@@ -98,31 +100,42 @@ const ConRegister = ({ setIsUserValid }) => {
     const nameReg = (/^([A-Za-z ]+){3,}$/)
 
 
+
     // // // Validation --------->
 
-    const { fName, lName, email, pass } = userData
+    const { fullName, url, email, pass } = userData
 
-    if (fName === "" || lName === "" || email === "" || pass === "") {
+    if (fullName === "" || email === "" || pass === "") {
       return alert("All feild should given")
     }
 
-    if (!nameReg.test(fName)) {
-      return alert("Givn First Name is not valid")
+    if (!nameReg.test(fullName)) {
+      return alert("Given First Name is not valid")
     }
 
-    if (!nameReg.test(lName)) {
-      return alert("Givn Last Name is not valid")
+
+    if(!url){
+      setUserData((pre)=>{
+        return {...pre , url : "http://res.cloudinary.com/dlvq8n2ca/image/upload/v1692032164/utemmzfh8jy0w4bufdp4.png"}
+      })
     }
+
+    
+    // const urlReg = (/^(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?\/[a-zA-Z0-9]{2,} $/)
+
+    // if (!urlReg.test(url)) {
+    //   return alert("Given URL is not valid")
+    // }
 
     if (!emailReg.test(email)) {
-      return alert("Givn Email is not valid")
+      return alert("Given Email is not valid")
     }
 
 
 
     localStorage.setItem("userData", JSON.stringify(userData))    // // // Set data locally in LocalHost
 
-    setUserData({ fName: "", lName: "", email: "", pass: "" })   // // // Set field to normal
+    setUserData({ fullName: "", url: "", email: "", pass: "" })   // // // Set field to normal
 
     event.preventDefault()     // // // don't refresh page 
 
@@ -146,51 +159,71 @@ const ConRegister = ({ setIsUserValid }) => {
 
       {/* Old code by using functional component ---------> */}
 
-      <div className='regester_div'>
-        <h3 className='text-center'>{userData.fName} {userData.lName}</h3>
-        <p className='text-center'>{userData.email}</p>
+      <div className='regester_div d-flex flex-column align-items-center'>
+        <h3 className='text-center m-0'>{userData.fullName || "Name"}</h3>
+        <p className='text-center mb-0'>{userData.email || "Email"}</p>
+        <p className='text-center ' style={ { width : "35vh" , lineBreak : "anywhere"}}>{userData.url || "URL"}</p>
 
         <form>
-          <ConInput 
+          <ConInput
             type="text"
-            placeholder="First Name" 
-            required={true} 
-            value={userData.fName} 
-            name="fName" 
-            onChange={changeHandleNew}
-          />
-
-          <ConInput 
-            type="text" 
-            placeholder="Last Name" 
-            required={true} 
-            value={userData.lName} 
-            name="lName" 
-            onChange={changeHandleNew} 
-          />
-
-          <ConInput 
-            type="text" 
-            placeholder="Email" 
-            required={true} 
-            value={userData.email} 
-            name="email" 
-            onChange={changeHandleNew} 
-          />
-
-          <ConInput 
-            type="password"
-            placeholder="Password"
+            placeholder="Full Name"
             required={true}
-            value={userData.pass}
-            name="pass"
+            value={userData.fullName}
+            name="fullName"
             onChange={changeHandleNew}
-            onKeyDownValue={true}
-            onClick={submitFunc}
-            
           />
 
-          <ConInput 
+
+          <ConInput
+            type="text"
+            placeholder="Email"
+            required={true}
+            value={userData.email}
+            name="email"
+            onChange={changeHandleNew}
+          />
+
+
+          <div className='d-flex align-items-center'>
+
+
+
+            <ConInput
+              className="w-75 text-danger"
+              type={passType}
+              placeholder="Password"
+              required={true}
+              value={userData.pass}
+              name="pass"
+              onChange={changeHandleNew}
+              onKeyDownValue={true}
+              onClick={submitFunc}
+
+            />
+
+            <button className='w-25 bg-success fw-bold text-white rounded rounded-3 text-decoration-none ' onClick={(e)=>{ setPassType((passType==="password") ? "text" : "password");  e.preventDefault();  }}>Eye</button>
+
+          </div>
+
+          <div className='d-flex align-items-center' >
+
+
+            <ConInput
+              className="w-75 overflow-scroll"
+              type="text"
+              placeholder="Profile Pic (URL)"
+              required={true}
+              value={userData.url}
+              name="url"
+              onChange={changeHandleNew}
+            />
+
+            <a target='_blank' href='https://fileupload-using-multer-cloudinary-by-ak.onrender.com/' className='w-25 bg-success fw-bold text-white rounded rounded-3 text-decoration-none p-1 border border-dark '>Get URL</a>
+
+          </div>
+
+          <ConInput
             type="button"
             defaultValue="Registeration"
             onClick={submitFunc}
